@@ -1,0 +1,11 @@
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\bin\Debug\18T1021314.BusinessLayer.dll
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\bin\Debug\18T1021314.BusinessLayer.pdb
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\obj\Debug\SV18T1021314.BusinessLayer.csproj.AssemblyReference.cache
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\obj\Debug\SV18T1021314.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\obj\Debug\18T1021314.BusinessLayer.dll
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\obj\Debug\18T1021314.BusinessLayer.pdb
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\bin\Debug\SV18T1021314.DataLayer.dll
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\bin\Debug\SV18T1021314.DomainModel.dll
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\bin\Debug\SV18T1021314.DataLayer.pdb
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\bin\Debug\SV18T1021314.DomainModel.pdb
+D:\NAM4\Web\SV18T1021314\18T1021314.BusinessLayer\obj\Debug\SV18T1021314.BusinessLayer.csproj.CopyComplete

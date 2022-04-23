@@ -1,0 +1,5 @@
+D:\NAM4\Web\SV18T1021314\SV18T1021314.DomainModel\bin\Debug\SV18T1021314.DomainModel.dll
+D:\NAM4\Web\SV18T1021314\SV18T1021314.DomainModel\bin\Debug\SV18T1021314.DomainModel.pdb
+D:\NAM4\Web\SV18T1021314\SV18T1021314.DomainModel\obj\Debug\SV18T1021314.DomainModel.csproj.CoreCompileInputs.cache
+D:\NAM4\Web\SV18T1021314\SV18T1021314.DomainModel\obj\Debug\SV18T1021314.DomainModel.dll
+D:\NAM4\Web\SV18T1021314\SV18T1021314.DomainModel\obj\Debug\SV18T1021314.DomainModel.pdb
