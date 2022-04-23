@@ -12,7 +12,7 @@ namespace SV18T1021314.DataLayer.SQLServer
     /// <summary>
     /// 
     /// </summary>
-    public class CategoryDAL :_BaseDAL, ICategoryDAL
+    public class CategoryDAL :_BaseDAL, ICommonDAL<Category>
     {
         /// <summary>
         /// 
@@ -138,7 +138,7 @@ namespace SV18T1021314.DataLayer.SQLServer
             return result;
         }
 
-        public IList<Category> List(int page, int pageSize, string searchValue)
+        public IList<Category> List(int page = 1, int pageSize = 0, string searchValue = "")
         {
             List<Category> data = new List<Category>();
 
@@ -158,7 +158,7 @@ namespace SV18T1021314.DataLayer.SQLServer
                                                   (CategoryName LIKE @searchValue)
                                                 )
                                     ) AS t
-                                    WHERE t.RowNumber BETWEEN (@page - 1) * @pageSize + 1 AND @page * @pageSize;";
+                                    WHERE (@PageSize = 0) OR  (t.RowNumber BETWEEN (@page - 1) * @pageSize + 1 AND @page * @pageSize)";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cn;
 

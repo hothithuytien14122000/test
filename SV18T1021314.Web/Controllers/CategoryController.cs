@@ -20,7 +20,7 @@ namespace SV18T1021314.Web.Controllers
         {
             int pageSize = 10;
             int rowCount = 0;
-            var data = CommonDataService.ListOfCategory(page, pageSize, searchValue, out rowCount);
+            var data = CommonDataService.ListOfCategories(page, pageSize, searchValue, out rowCount);
             Models.BasePaginationResult model = new Models.CategoryPaginationResult()
             {
                 Page = page,
@@ -90,7 +90,7 @@ namespace SV18T1021314.Web.Controllers
             }
             else
             {
-                CommonDataService.UpdataCategory(model);
+                CommonDataService.UpdateCategory(model);
                 return RedirectToAction("Index");
             }
         }

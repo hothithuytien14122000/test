@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SV18T1021314.DataLayer.SQLServer
 {
-    public class EmployeeDAL : _BaseDAL, IEmployeeDAL
+    public class EmployeeDAL : _BaseDAL, ICommonDAL<Employee>
     {
         /// <summary>
         /// 
@@ -133,7 +133,7 @@ namespace SV18T1021314.DataLayer.SQLServer
             return result;
         }
 
-        public IList<Employee> List(int page, int pageSize, string searchValue)
+        public IList<Employee> List(int page = 1, int pageSize = 0, string searchValue = "")
         {
             List<Employee> data = new List<Employee>();
 
@@ -157,7 +157,7 @@ namespace SV18T1021314.DataLayer.SQLServer
                                                  OR(Email LIKE @searchValue)
                                                 )
                                     ) AS t
-                                    WHERE t.RowNumber BETWEEN (@page - 1) * @pageSize + 1 AND @page * @pageSize;";
+                                    WHERE (@PageSize = 0) OR  (t.RowNumber BETWEEN (@page - 1) * @pageSize + 1 AND @page * @pageSize)";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cn;
 

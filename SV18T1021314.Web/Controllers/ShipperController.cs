@@ -20,7 +20,7 @@ namespace SV18T1021314.Web.Controllers
         {
             int pageSize = 10;
             int rowCount = 0;
-            var data = CommonDataService.ListOfShipper(page, pageSize, searchValue, out rowCount);
+            var data = CommonDataService.ListOfShippers(page, pageSize, searchValue, out rowCount);
             Models.BasePaginationResult model = new Models.ShipperPaginationResult()
             {
                 Page = page,

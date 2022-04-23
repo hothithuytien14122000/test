@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SV18T1021314.DataLayer.SQLServer
 {
-    public class CountryDAL : _BaseDAL, ICountryDAL
+    public class CountryDAL : _BaseDAL, ICommonDAL<Country>
     {
         /// <summary>
         /// 
@@ -18,12 +18,38 @@ namespace SV18T1021314.DataLayer.SQLServer
         public CountryDAL(string connectionString) : base(connectionString)
         {
         }
-        public IList<Country> List()
+
+        public int Add(Country data)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Count(string searchValue)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Country Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool InUsed(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Country> List(int page = 1, int pageSize = 0, string searchValue = "")
         {
             List<Country> data = new List<Country>();
             using (SqlConnection cn = OpenConnection())
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Countries", cn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Countries");
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cn;
 
@@ -41,6 +67,11 @@ namespace SV18T1021314.DataLayer.SQLServer
                 cn.Close();
             }
             return data;
+        }
+
+        public bool Update(Country data)
+        {
+            throw new NotImplementedException();
         }
     }
 }

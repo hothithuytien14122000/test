@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SV18T1021314.DataLayer.SQLServer
 {
-    public class ShipperDAL :_BaseDAL, IShipperDAL
+    public class ShipperDAL :_BaseDAL, ICommonDAL<Shipper>
     {
         /// <summary>
         /// 
@@ -129,7 +129,7 @@ namespace SV18T1021314.DataLayer.SQLServer
             return result;
         }
 
-        public IList<Shipper> List(int page, int pageSize, string searchValue)
+        public IList<Shipper> List(int page = 1, int pageSize = 0, string searchValue = "")
         {
             List<Shipper> data = new List<Shipper>();
 
@@ -149,7 +149,7 @@ namespace SV18T1021314.DataLayer.SQLServer
                                                     (ShipperName LIKE @searchValue)
                                                 )
                                     ) AS t
-                                    WHERE t.RowNumber BETWEEN (@page - 1) * @pageSize + 1 AND @page * @pageSize;";
+                                    WHERE (@PageSize = 0) OR  (t.RowNumber BETWEEN (@page - 1) * @pageSize + 1 AND @page * @pageSize)";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cn;
 
